@@ -1,0 +1,15 @@
+/* Custom scrollbar styles for the modal */
+
+.modal-body::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgb(250, 248, 248); /* Track background */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: rgb(147, 143, 143); /* Scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+  border: 2px solid transparent; /* Adds space between track and thumb */
+}

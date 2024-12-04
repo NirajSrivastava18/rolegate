@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  height: 60px;
+}
+
+.header-logo img {
+  height: 40px;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between greeting and logout icon */
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-welcome {
+  font-size: 1.1rem;
+  margin: 0;
+  /* font-family: 'Parkinsans', sans-serif; */
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.user-role {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #cccccc; /* Light gray for role text */
+}
+
+.logout-icon {
+  font-size: 1.5rem;
+  color: #ff4d4f; /* Red color for logout icon */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}

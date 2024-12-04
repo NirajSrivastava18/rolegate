@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# ROLEGATE RBAC React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project is a Role-Based Access Control (RBAC) application built using React. It is designed to manage user access and permissions based on three predefined roles: Admin, Editor, and Viewer. Each role has specific access permissions to interact with the user data. The application also includes a dashboard showing user statistics and a table listing all users with filtering options for roles and status.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Data API:** A Mock API is used for all CRUD operations on user data.
+- **Authentication:** Users log in using credentials provided by the organization.
+- **Dashboard:** Displays total number of users, active users, and inactive users.
+- **User Table:** Lists all users with filters for role and status.
+- **Role-Based Access:**
+  - **Admin:** Full CRUD (Create, Read, Update, Delete) operations and can toggle user status between active and inactive.
+  - **Editor:** Can edit user information and toggle user status.
+  - **Viewer:** Can only view user details.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/your-username/rbac-react-app.git
+   cd rbac-react-app
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open the application in your browser at:
+   ```
+   http://localhost:3000
+   ```
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Log in using credentials provided by the organization.
+2. Based on your role, interact with the application as follows:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - **Admin:**
+     - View the dashboard with user statistics.
+     - Manage users via the table (add, edit, delete users, and toggle status).
+   - **Editor:**
+     - View the dashboard with user statistics.
+     - Edit user details and toggle user status.
+   - **Viewer:**
+     - View the dashboard with user statistics.
+     - View user details in the table.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Log in using credentials provided by the organization. Use the following predefined users to access the application:
+   ```javascript
+   {
+     id: 1,
+     name: 'Alice Johnson',
+     role: 'Admin',
+     status: 'Active',
+     username: 'alice',
+     password: 'admin123',
+     email: 'alice.johnson@example.com',
+     phone: '+1-555-123-4567',
+     lastLogin: '2024-11-28T08:45:00Z',
+   },
+   {
+     id: 2,
+     name: 'Bob Smith',
+     role: 'Editor',
+     status: 'Active',
+     username: 'bob',
+     password: 'editor123',
+     email: 'bob.smith@example.com',
+     phone: '+1-555-987-6543',
+     lastLogin: '2024-11-27T14:20:00Z',
+   },
+   {
+     id: 3,
+     name: 'Charlie Brown',
+     role: 'Viewer',
+     status: 'Active',
+     username: 'charlie',
+     password: 'viewer123',
+     email: 'charlie.brown@example.com',
+     phone: '+1-555-234-5678',
+     lastLogin: '2024-11-25T09:15:00Z',
+   }
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Application Structure
 
-## Learn More
+- **Login Page:**
+  - Secure login mechanism to authenticate users.
+- **Dashboard:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Total number of users.
+  - Total number of active users.
+  - Total number of inactive users.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **User Management Table:**
+  - Displays user details including name, role, and status.
+  - Filter options:
+    - Role (Admin, Editor, Viewer)
+    - Status (Active, Inactive)
 
-### Code Splitting
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Frontend:** React, React Router
+- **Styling:** react-Bootstrap
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
